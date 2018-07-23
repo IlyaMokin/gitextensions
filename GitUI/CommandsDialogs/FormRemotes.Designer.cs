@@ -363,6 +363,7 @@ namespace GitUI.CommandsDialogs
             this.comboBoxPushUrl.Size = new System.Drawing.Size(248, 21);
             this.comboBoxPushUrl.TabIndex = 7;
             this.comboBoxPushUrl.Visible = false;
+            this.comboBoxPushUrl.BackColor = System.Drawing.Color.White;
             // 
             // label2
             // 
@@ -385,6 +386,7 @@ namespace GitUI.CommandsDialogs
             this.Url.Location = new System.Drawing.Point(109, 32);
             this.Url.Name = "Url";
             this.Url.Size = new System.Drawing.Size(248, 21);
+            this.Url.BackColor = System.Drawing.Color.White;
             this.Url.TabIndex = 3;
             // 
             // labelPushUrl
@@ -423,6 +425,7 @@ namespace GitUI.CommandsDialogs
             // 
             // RemoteName
             // 
+            this.RemoteName.BackColor = System.Drawing.Color.White;
             this.RemoteName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RemoteName.Location = new System.Drawing.Point(109, 3);
             this.RemoteName.Name = "RemoteName";

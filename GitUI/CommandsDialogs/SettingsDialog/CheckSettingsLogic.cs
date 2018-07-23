@@ -106,7 +106,7 @@ namespace GitUI.CommandsDialogs.SettingsDialog
             yield return
                 CommonLogic.GetRegistryValue(Registry.LocalMachine,
                                  "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Git_is1", "InstallLocation");
-            string programFiles = Environment.GetEnvironmentVariable("ProgramFiles");
+            string programFiles = Environment.GetEnvironmentVariable("ProgramFiles") ?? "";
             string programFilesX86 = null;
             if (8 == IntPtr.Size
                 || !String.IsNullOrEmpty(Environment.GetEnvironmentVariable("PROCESSOR_ARCHITEW6432")))
