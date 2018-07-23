@@ -136,7 +136,7 @@ Inactive remote is completely invisible to git.");
                     if (lvi != null)
                     {
                         lvi.Selected = true;
-                        flpnlRemoteManagement.Enabled = !((GitRemote)lvi.Tag).Disabled;
+                        //flpnlRemoteManagement.Enabled = !((GitRemote)lvi.Tag).Disabled;
                     }
                 }
                 // default fallback - if the preselection didn't work select the first available one
@@ -554,14 +554,14 @@ Inactive remote is completely invisible to git.");
             comboBoxPushUrl.Text = string.Empty;
             checkBoxSepPushUrl.Checked = false;
             PuttySshKey.Text = string.Empty;
-            gbMgtPanel.Text = _gbMgtPanelHeaderNew.Text;
+            //gbMgtPanel.Text = _gbMgtPanelHeaderNew.Text;
 
             if (Remotes.SelectedIndices.Count < 1)
             {
                 // we are here because we're adding a new remote - so no remotes selected
                 // we just need to enable the panel so the user can enter the information
                 _selectedRemote = null;
-                flpnlRemoteManagement.Enabled = true;
+                //flpnlRemoteManagement.Enabled = true;
                 return;
             }
 
@@ -578,10 +578,10 @@ Inactive remote is completely invisible to git.");
             comboBoxPushUrl.Text = _selectedRemote.PushUrl;
             checkBoxSepPushUrl.Checked = !string.IsNullOrEmpty(_selectedRemote.PushUrl);
             PuttySshKey.Text = _selectedRemote.PuttySshKey;
-            gbMgtPanel.Text = _gbMgtPanelHeaderEdit.Text;
+            //gbMgtPanel.Text = _gbMgtPanelHeaderEdit.Text;
             BindBtnToggleState(_selectedRemote.Disabled);
             btnToggleState.Visible = true;
-            flpnlRemoteManagement.Enabled = !_selectedRemote.Disabled;
+            //flpnlRemoteManagement.Enabled = !_selectedRemote.Disabled;
         }
 
         private void UpdateBranchClick(object sender, EventArgs e)
@@ -596,7 +596,22 @@ Inactive remote is completely invisible to git.");
 
         private void Remotes_MouseUp(object sender, MouseEventArgs e)
         {
-            flpnlRemoteManagement.Enabled = !_selectedRemote?.Disabled ?? true;
+            //flpnlRemoteManagement.Enabled = !_selectedRemote?.Disabled ?? true;
+        }
+
+        private void comboBoxPushUrl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelPushUrl_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void ShowSeparatePushUrl(bool visible)
